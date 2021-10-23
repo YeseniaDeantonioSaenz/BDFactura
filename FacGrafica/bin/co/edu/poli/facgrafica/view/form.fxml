@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Accordion maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="783.0" prefWidth="762.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.poli.facgrafica.Controller.FormController">
+  <panes>
+    <TitledPane fx:id="bsuc" animated="false" prefHeight="305.0" prefWidth="614.0" text="Registro Empleados">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Text layoutX="220.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Empleado" textAlignment="CENTER" wrappingWidth="319.9830722808838" />
+                  <Button id="button1" fx:id="button1" layoutX="656.0" layoutY="566.0" mnemonicParsing="false" onAction="#enviar1" text="Enviar" />
+                  <GridPane layoutX="137.0" layoutY="96.0" prefHeight="450.0" prefWidth="485.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label prefHeight="25.0" prefWidth="112.0" text="Contraseña" GridPane.rowIndex="1" />
+                        <TextField fx:id="Contrasena" prefHeight="26.0" prefWidth="181.0" promptText="Contraseña" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="Correo" prefHeight="26.0" prefWidth="179.0" promptText="Correo" GridPane.columnIndex="1" />
+                        <TextField fx:id="Cedula" prefHeight="26.0" prefWidth="183.0" promptText="Cedula" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label prefHeight="25.0" prefWidth="112.0" text="Correo" />
+                        <Label prefHeight="25.0" prefWidth="112.0" text="Cedula" GridPane.rowIndex="3" />
+                        <Label prefHeight="25.0" prefWidth="112.0" text="Nombre" GridPane.rowIndex="2" />
+                        <TextField fx:id="Nombre" prefHeight="26.0" prefWidth="184.0" promptText="Nombre" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+               </children></AnchorPane>
+      </content>
+    </TitledPane>
+    <TitledPane animated="false" prefHeight="75.0" prefWidth="600.0" text="Producto">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button id="button2" fx:id="button2" layoutX="681.0" layoutY="591.0" mnemonicParsing="false" onAction="#send2" text="Enviar" />
+                  <GridPane layoutX="170.0" layoutY="77.0" prefHeight="514.0" prefWidth="471.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ComboBox fx:id="tipo" onAction="#addtipo" opacity="0.47" prefHeight="40.0" prefWidth="210.0" promptText="Tipo" GridPane.columnIndex="1" />
+                        <TextField fx:id="codigo" promptText="Código" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="nombre" promptText="Nombre" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="precio" promptText="Precio" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label prefHeight="36.0" prefWidth="100.0" text="Tipo de Producto" />
+                        <Label prefHeight="36.0" prefWidth="100.0" text="Código" GridPane.rowIndex="1" />
+                        <Label prefHeight="36.0" prefWidth="100.0" text="Nombre" GridPane.rowIndex="2" />
+                        <Label prefHeight="36.0" prefWidth="213.0" text="Precio" GridPane.rowIndex="3" />
+                        <Label prefHeight="36.0" prefWidth="212.0" text="Impuesto" GridPane.rowIndex="5" />
+                        <Label fx:id="esv" prefHeight="36.0" prefWidth="211.0" text="¿Es Volatil?" GridPane.rowIndex="6" />
+                        <Label fx:id="v" prefHeight="36.0" prefWidth="212.0" text="Voltaje" GridPane.rowIndex="6" />
+                        <TextField fx:id="voltaje" promptText="Voltaje" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <HBox fx:id="volatil" alignment="CENTER_LEFT" prefHeight="13.0" prefWidth="210.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <children>
+                              <RadioButton id="verod" fx:id="rad1" contentDisplay="CENTER" mnemonicParsing="false" opacity="0.79" prefHeight="0.0" prefWidth="105.0" text="Verdadero" textAlignment="CENTER">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="grupovolatil" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton id="verod" fx:id="rad2" contentDisplay="CENTER" mnemonicParsing="false" opacity="0.79" prefHeight="0.0" prefWidth="105.0" selected="true" text="Falso" textAlignment="CENTER" toggleGroup="$grupovolatil" />
+                           </children>
+                        </HBox>
+                        <TextField fx:id="cantidad" promptText="Cantidad" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label prefHeight="36.0" prefWidth="214.0" text="Cantidad" GridPane.rowIndex="4" />
+                        <HBox alignment="CENTER" opacity="0.8" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <children>
+                              <RadioButton fx:id="noaplica" mnemonicParsing="false" selected="true" text="No Aplica" />
+                              <RadioButton fx:id="ocho" mnemonicParsing="false" text="8%" />
+                              <RadioButton fx:id="diecinueve" mnemonicParsing="false" text="19%" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+               </children></AnchorPane>
+      </content>
+    </TitledPane>
+      <TitledPane animated="false" prefHeight="75.0" prefWidth="600.0" text="Pago">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ComboBox fx:id="tipopago" layoutX="14.0" layoutY="14.0" onAction="#addtipopago" prefWidth="150.0" promptText="Tipo de Pago" />
+                  <Button fx:id="button4" layoutX="682.0" layoutY="591.0" mnemonicParsing="false" onAction="#send4" text="Enviar" />
+                  <GridPane fx:id="paneefec" layoutX="124.0" layoutY="39.0" prefHeight="611.0" prefWidth="511.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="205.00003662109376" minHeight="10.0" prefHeight="205.00003662109376" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="203.40000000000003" minHeight="10.0" prefHeight="201.79996337890628" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label prefHeight="31.0" prefWidth="103.0" text="Cantidad en Billetes" GridPane.rowIndex="1" />
+                        <Label prefHeight="31.0" prefWidth="103.0" text="Número de Referencia" />
+                        <Label prefHeight="31.0" prefWidth="103.0" text="Cantidad en Monedas" GridPane.rowIndex="2" />
+                        <TextField fx:id="numref11" promptText="N° Referencia" GridPane.columnIndex="1" />
+                        <TextField fx:id="canbi" prefWidth="207.0" promptText="Cantidad en Billetes" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="canmo" promptText="Cantidad en Moneda" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+                  <GridPane fx:id="panetar" layoutX="129.0" layoutY="87.0" prefHeight="535.0" prefWidth="522.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label prefHeight="31.0" prefWidth="103.0" text="Titular" GridPane.rowIndex="1" />
+                        <Label prefHeight="31.0" prefWidth="103.0" text="Número de Referencia" />
+                        <Label prefHeight="31.0" prefWidth="103.0" text="Número de Tarjeta" GridPane.rowIndex="2" />
+                        <TextField fx:id="numref1" promptText="N° Referencia" GridPane.columnIndex="1" />
+                        <TextField fx:id="titu" promptText="Nombre Titular Tarjeta" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label prefHeight="31.0" prefWidth="103.0" text="Banco" GridPane.rowIndex="3" />
+                        <TextField fx:id="banc" promptText="Banco" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label prefHeight="31.0" prefWidth="103.0" text="Tipo" GridPane.rowIndex="4" />
+                        <TextField fx:id="tipotar" promptText="Tipo de Tarjeta" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label prefHeight="31.0" prefWidth="103.0" text="Decendencia" GridPane.rowIndex="5" />
+                        <TextField fx:id="dec" promptText="Decendencia" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <TextField fx:id="ntar" promptText="N° Tarjeta" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label prefHeight="31.0" prefWidth="103.0" text="Fecha Caducidad" GridPane.rowIndex="6" />
+                        <TextField fx:id="fechacad" promptText="MM / AAAA" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                     </children>
+                  </GridPane>
+                  <GridPane fx:id="panecheque" layoutX="155.0" layoutY="68.0" prefHeight="553.0" prefWidth="509.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label prefHeight="31.0" prefWidth="103.0" text="Banco" GridPane.rowIndex="1" />
+                        <Label prefHeight="31.0" prefWidth="103.0" text="Número de Referencia" />
+                        <Label prefHeight="31.0" prefWidth="103.0" text="Fecha" GridPane.rowIndex="2" />
+                        <TextField fx:id="numref" promptText="N° Referencia" GridPane.columnIndex="1" />
+                        <TextField fx:id="banc1" promptText="Banco" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <DatePicker fx:id="dat" opacity="0.69" prefHeight="26.0" prefWidth="261.0" promptText="Fecha" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label prefHeight="31.0" prefWidth="103.0" text="Paguese Antes De" GridPane.rowIndex="3" />
+                        <TextField fx:id="pad" promptText="Paguese antes de" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label prefHeight="31.0" prefWidth="103.0" text="Cantidad" GridPane.rowIndex="4" />
+                        <TextField fx:id="cantlet" promptText="Cantidad en Letras" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label prefHeight="31.0" prefWidth="103.0" text="Firma" GridPane.rowIndex="5" />
+                        <TextField fx:id="firm" promptText="Firma" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+    <TitledPane fx:id="bcl" animated="false" text="Cliente">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Text layoutX="322.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Información Cliente" textAlignment="CENTER" />
+                  <Button fx:id="button3" layoutX="693.0" layoutY="597.0" mnemonicParsing="false" onAction="#send3" text="Enviar" />
+                  <GridPane layoutX="120.0" layoutY="80.0" prefHeight="534.0" prefWidth="519.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TextField fx:id="nombrecliente" promptText="Nombre" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="cedulaclien" promptText="N° Identificación" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="correoclien" promptText="Correo" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="puntos" promptText="N° Puntos" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label prefHeight="59.0" prefWidth="203.0" text="Identificación del Cliente" GridPane.rowIndex="1" />
+                        <Label prefHeight="59.0" prefWidth="203.0" text="Nombre y Apellidos" GridPane.rowIndex="2" />
+                        <Label prefHeight="59.0" prefWidth="203.0" text="Correo" GridPane.rowIndex="3" />
+                        <Label prefHeight="59.0" prefWidth="203.0" text="Puntos" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+               </children></AnchorPane>
+      </content>
+    </TitledPane>
+      <TitledPane animated="false" prefHeight="370.0" prefWidth="691.0" text="Factura Impresa">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="454.0" prefWidth="761.0" style="-fx-background-color: white;">
+               <children>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="480.0" prefWidth="763.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="137.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../../../../../Downloads/Captura%20de%20pantalla%202021-05-06%20190231.jpg" />
+                           </image>
+                        </ImageView>
+                        <TextArea fx:id="impalm" editable="false" layoutX="337.0" layoutY="48.0" prefHeight="138.0" prefWidth="302.0" styleClass="centeredTextArea" />
+                        <TextArea fx:id="textfe" editable="false" layoutX="79.0" layoutY="134.0" prefHeight="50.0" prefWidth="219.0" styleClass="centeredTextArea">
+                           <font>
+                              <Font name="System Bold Italic" size="25.0" />
+                           </font>
+                        </TextArea>
+                        <TextField fx:id="total" editable="false" layoutX="137.0" layoutY="197.0" prefHeight="42.0" prefWidth="502.0" style="-fx-background-color: #231f20; -fx-text-fill: white;">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font></TextField>
+                        <TextArea fx:id="improd" editable="false" layoutX="139.0" layoutY="288.0" prefHeight="340.0" prefWidth="507.0" styleClass="textareapro" />
+                        <Button fx:id="imp" layoutX="672.0" layoutY="15.0" mnemonicParsing="false" onAction="#onimp" text="Generar" />
+                        <Text layoutX="149.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CÓDGO      NOMBRE      CANTIDAD      PRECIO" wrappingWidth="487.5830936431885">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+         </content>
+      </TitledPane>
+  </panes>
+</Accordion>
