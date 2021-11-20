@@ -1,0 +1,40 @@
+.centeredTextArea .scroll-pane .content .text {
+    -fx-text-alignment: right;
+
+}
+
+.centeredTextArea {
+    -fx-background-color: transparent;
+}
+
+.centeredTextArea .scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.centeredTextArea .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+
+
+.centeredTextArea .scroll-pane .content{
+    -fx-background-color: transparent;
+}
+
+
+
+.textareapro {
+    -fx-background-color: transparent;
+}
+
+.textareapro .scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.textareapro .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+
+
+.textareapro .scroll-pane .content{
+    -fx-background-color: transparent;
+}
