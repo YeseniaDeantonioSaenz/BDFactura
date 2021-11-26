@@ -1,0 +1,986 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="905.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.FormController">
+	<children>
+		<TabPane layoutX="1.0" layoutY="1.0" prefHeight="560.0" prefWidth="905.0" tabClosingPolicy="UNAVAILABLE">
+			<tabs>
+				<Tab text="Administración">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+							<children>
+								<TabPane layoutX="14.0" layoutY="14.0" prefHeight="510.0" prefWidth="882.0" tabClosingPolicy="UNAVAILABLE">
+									<tabs>
+										<Tab text="Crear">
+											<content>
+												<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="259.0" prefWidth="361.0">
+													<children>
+                                          <SplitPane dividerPositions="0.33254493850520334" layoutX="14.0" layoutY="14.0" prefHeight="462.0" prefWidth="847.0">
+                                            <items>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: white;">
+                                                   <children>
+                                                      <ImageView fitHeight="373.0" fitWidth="276.0" layoutX="8.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@Logo.jpg" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children></AnchorPane>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="461.0" prefWidth="303.0">
+                                                   <children>
+            														<Accordion prefHeight="462.0" prefWidth="562.0">
+            															<panes>
+            																<TitledPane animated="false" prefHeight="387.0" prefWidth="658.0" text="Cliente">
+            																	<content>
+            																		<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            																			<children>
+            																				<GridPane layoutX="62.0" layoutY="56.0" prefHeight="227.0" prefWidth="418.0">
+            																					<columnConstraints>
+            																						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            																						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            																					</columnConstraints>
+            																					<rowConstraints>
+            																						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																					</rowConstraints>
+            																					<children>
+            																						<TextField fx:id="cedulaclientecrear" GridPane.columnIndex="1" />
+            																						<Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cédula" wrappingWidth="190.1366958618164" />
+            																						<Text strokeType="OUTSIDE" strokeWidth="0.0" text="Correo" wrappingWidth="190.1366958618164" GridPane.rowIndex="1" />
+            																						<Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" wrappingWidth="190.1366958618164" GridPane.rowIndex="2" />
+            																						<TextField fx:id="correoclientecrear" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            																						<TextField fx:id="nombreclientecrear" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            																					</children>
+            																				</GridPane>
+                                                                        <Button fx:id="crearcliente" layoutX="454.0" layoutY="320.0" mnemonicParsing="false" onAction="#actioncrearcliente" text="Crear" />
+            																			</children>
+            																		</AnchorPane>
+            																	</content>
+            																</TitledPane>
+            																<TitledPane animated="false" prefHeight="435.0" prefWidth="852.0" text="Empleados">
+            																	<content>
+            																		<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            																			<children>
+            																				<GridPane layoutX="51.0" layoutY="31.0" prefHeight="230.0" prefWidth="398.0">
+            																					<columnConstraints>
+            																						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            																						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            																					</columnConstraints>
+            																					<rowConstraints>
+            																						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																					</rowConstraints>
+            																					<children>
+            																						<TextField fx:id="correoemplcrear" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            																						<Text strokeType="OUTSIDE" strokeWidth="0.0" text="Correo" wrappingWidth="190.1366958618164" GridPane.rowIndex="2" />
+            																						<Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" wrappingWidth="190.1366958618164" GridPane.rowIndex="1" />
+            																						<TextField fx:id="nombreemplcrear" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            																						<TextField fx:id="cedulaemplcrear" GridPane.columnIndex="1" />
+            																						<Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cédula" wrappingWidth="190.1366958618164" />
+                                                                              <TextField fx:id="nitempresaemp" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="NIT Empresa" wrappingWidth="190.1366958618164" GridPane.rowIndex="3" />
+            																					</children>
+            																				</GridPane>
+                                                                        <Button fx:id="crearempleado" layoutX="456.0" layoutY="321.0" mnemonicParsing="false" onAction="#actioncrearempl" text="Crear" />
+            																			</children>
+            																		</AnchorPane>
+            																	</content>
+            																</TitledPane>
+            																<TitledPane animated="false" text="Producto">
+            																	<content>
+            																		<AnchorPane fx:id="grazu" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            																			<children>
+            																				<GridPane layoutX="46.0" layoutY="14.0" prefHeight="306.0" prefWidth="429.0">
+            																					<columnConstraints>
+            																						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            																						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            																					</columnConstraints>
+            																					<rowConstraints>
+            																						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																					</rowConstraints>
+            																					<children>
+            																						<ComboBox fx:id="comtipoprodcrear" onAction="#addtipocrear" opacity="0.47" prefHeight="40.0" prefWidth="210.0" promptText="Tipo" GridPane.columnIndex="1" />
+            																						<TextField fx:id="codigobarrascrear" promptText="Código" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            																						<TextField fx:id="nombreprodcrear" promptText="Nombre" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            																						<TextField fx:id="precioprodcrear" promptText="Precio" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            																						<Label prefHeight="36.0" prefWidth="100.0" text="Tipo de Producto" />
+            																						<Label prefHeight="36.0" prefWidth="100.0" text="Código Barras" GridPane.rowIndex="1" />
+            																						<Label prefHeight="36.0" prefWidth="100.0" text="Nombre" GridPane.rowIndex="2" />
+            																						<Label prefHeight="36.0" prefWidth="213.0" text="Precio" GridPane.rowIndex="3" />
+            																						<Label prefHeight="36.0" prefWidth="212.0" text="Impuesto" GridPane.rowIndex="4" />
+            																						<TextField fx:id="voltajeprodcrear" promptText="Voltaje" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            																						<HBox alignment="CENTER" opacity="0.8" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            																							<children>
+            																								<RadioButton fx:id="noaplica" mnemonicParsing="false" selected="true" text="No Aplica" />
+            																								<RadioButton fx:id="ocho" mnemonicParsing="false" text="8%">
+                                                                                       <toggleGroup>
+            																										<ToggleGroup fx:id="impuestogroup" />
+                                                                                       </toggleGroup>
+                                                                                    </RadioButton>
+            																								<RadioButton fx:id="diecinueve" mnemonicParsing="false" text="19%" toggleGroup="$impuestogroup" />
+            																							</children>
+            																						</HBox>
+                                                                              <TextField fx:id="grazucar" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                                              <Label fx:id="titulgrazu" prefHeight="36.0" prefWidth="211.0" text="Gramos Azucar" GridPane.rowIndex="5" />
+            																						<Label fx:id="esvcrear" prefHeight="36.0" prefWidth="211.0" text="¿Es Volatil?" GridPane.rowIndex="5" />
+            																						<Label fx:id="voltcrear" prefHeight="36.0" prefWidth="212.0" text="Voltaje" GridPane.rowIndex="5" />
+            																						<HBox fx:id="volatil" alignment="CENTER_LEFT" prefHeight="13.0" prefWidth="210.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            																							<children>
+            																								<RadioButton id="verod" fx:id="rad1" contentDisplay="CENTER" mnemonicParsing="false" opacity="0.79" prefHeight="0.0" prefWidth="105.0" text="Verdadero" textAlignment="CENTER">
+                                                                                       <toggleGroup>
+            																										<ToggleGroup fx:id="grupovolatil" />
+                                                                                       </toggleGroup>
+                                                                                    </RadioButton>
+            																								<RadioButton id="verod" fx:id="rad2" contentDisplay="CENTER" mnemonicParsing="false" opacity="0.79" prefHeight="0.0" prefWidth="105.0" selected="true" text="Falso" textAlignment="CENTER" toggleGroup="$grupovolatil" />
+            																							</children>
+            																						</HBox>
+            																					</children>
+            																				</GridPane>
+                                                                        <Button fx:id="crearprod" layoutX="456.0" layoutY="320.0" mnemonicParsing="false" onAction="#actioncrearprod" text="Crear" />
+            																			</children>
+            																		</AnchorPane>
+            																	</content>
+            																</TitledPane>
+                                                            <TitledPane animated="false" text="Almacén">
+                                                               <content>
+                                                                  <AnchorPane fx:id="grazu1" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <GridPane layoutX="46.0" layoutY="14.0" prefHeight="306.0" prefWidth="429.0">
+                                                                           <columnConstraints>
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                           </columnConstraints>
+                                                                           <rowConstraints>
+                                                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                           </rowConstraints>
+                                                                           <children>
+                                                                              <TextField fx:id="nombrealmcrear" promptText="Nombre Almacén" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                              <TextField fx:id="gerentealmcrear" promptText="Gerente Almacén" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                                              <Label prefHeight="36.0" prefWidth="100.0" text="NIT Almacén" />
+                                                                              <Label prefHeight="36.0" prefWidth="100.0" text="Nombre" GridPane.rowIndex="1" />
+                                                                              <Label prefHeight="36.0" prefWidth="100.0" text="Teléfono" GridPane.rowIndex="2" />
+                                                                              <Label prefHeight="36.0" prefWidth="213.0" text="Gerente" GridPane.rowIndex="3" />
+                                                                              <Label prefHeight="36.0" prefWidth="212.0" text="Dirección" GridPane.rowIndex="4" />
+                                                                              <TextField fx:id="nitalmcrear" promptText="NIT Almacén" GridPane.columnIndex="1" />
+                                                                              <TextField fx:id="telefonoalmcrear" layoutX="225.0" layoutY="151.0" promptText="Teléfono Almacén" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                              <TextField fx:id="direccionalmcrear" promptText="Dirección Almacén" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                                           </children>
+                                                                        </GridPane>
+                                                                        <Button fx:id="crearalm" layoutX="456.0" layoutY="320.0" mnemonicParsing="false" onAction="#actioncrearalm" text="Crear" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </content>
+                                                            </TitledPane>
+            															</panes>
+            														</Accordion>
+                                                   </children>
+                                                </AnchorPane>
+                                            </items>
+                                          </SplitPane>
+													</children>
+												</AnchorPane>
+											</content>
+										</Tab>
+										<Tab text="Modificar">
+											<content>
+												<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <SplitPane dividerPositions="0.33254493850520334" layoutX="14.0" layoutY="14.0" prefHeight="462.0" prefWidth="847.0">
+                                             <items>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: white;">
+                                                   <children>
+                                                      <ImageView fitHeight="373.0" fitWidth="276.0" layoutX="8.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@Logo.jpg" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="461.0" prefWidth="303.0">
+                                                   <children>
+                                                      <Accordion prefHeight="462.0" prefWidth="562.0">
+                                                         <panes>
+                                                            <TitledPane animated="false" prefHeight="387.0" prefWidth="658.0" text="Cliente">
+                                                               <content>
+                                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <Button fx:id="modcliente" layoutX="453.0" layoutY="302.0" mnemonicParsing="false" onAction="#actionmodcliente" text="Modificar" />
+                                                                        <Text layoutX="25.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrese la Cédula del Cliente a Modificar" textAlignment="CENTER" wrappingWidth="225.2523193359375">
+                                                                           <font>
+                                                                              <Font size="13.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                        <TextField fx:id="cedulamodcliente" layoutX="266.0" layoutY="41.0" prefHeight="26.0" prefWidth="214.0" />
+                                                                        <Text layoutX="50.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seleccione El campo a Modificar" />
+                                                                        <ComboBox fx:id="combmodcliente" layoutX="268.0" layoutY="115.0" onAction="#addcamposcliente" prefHeight="26.0" prefWidth="214.0" />
+                                                                        <GridPane fx:id="modcorreocl" layoutX="50.0" layoutY="212.0" prefHeight="30.0" prefWidth="436.0">
+                                                                          <columnConstraints>
+                                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                          </columnConstraints>
+                                                                          <rowConstraints>
+                                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                          </rowConstraints>
+                                                                           <children>
+                                                                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Correo" />
+                                                                              <TextField fx:id="correomodcliente" prefHeight="26.0" prefWidth="223.0" GridPane.columnIndex="1" />
+                                                                           </children>
+                                                                        </GridPane>
+                                                                        <GridPane fx:id="modnombrecl" layoutX="50.0" layoutY="197.0" prefHeight="30.0" prefWidth="436.0">
+                                                                           <columnConstraints>
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                           </columnConstraints>
+                                                                           <rowConstraints>
+                                                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                           </rowConstraints>
+                                                                           <children>
+                                                                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" />
+                                                                              <TextField fx:id="nombremodcliente" prefHeight="26.0" prefWidth="223.0" GridPane.columnIndex="1" />
+                                                                           </children>
+                                                                        </GridPane>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </content>
+                                                            </TitledPane>
+                                                            <TitledPane animated="false" prefHeight="435.0" prefWidth="852.0" text="Empleados">
+                                                               <content>
+                                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <Text layoutX="46.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrese la Cédula del Empleado a Modificar" textAlignment="CENTER" wrappingWidth="177.63473510742188" />
+                                                                        <TextField fx:id="cedulamodempl" layoutX="256.0" layoutY="46.0" prefHeight="26.0" prefWidth="202.0" />
+                                                                        <Text layoutX="46.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seleccione el Campo a Modificar" />
+                                                                        <ComboBox fx:id="combmodempl" layoutX="256.0" layoutY="107.0" onAction="#addcamposempl" prefHeight="26.0" prefWidth="201.0" />
+                                                                        <GridPane fx:id="modnombrempl" layoutX="46.0" layoutY="175.0" prefHeight="30.0" prefWidth="412.0">
+                                                                          <columnConstraints>
+                                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                          </columnConstraints>
+                                                                          <rowConstraints>
+                                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                          </rowConstraints>
+                                                                           <children>
+                                                                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" />
+                                                                              <TextField fx:id="nombremodempl" GridPane.columnIndex="1" />
+                                                                           </children>
+                                                                        </GridPane>
+                                                                        <GridPane fx:id="modcorreoempl" layoutX="46.0" layoutY="190.0" prefHeight="30.0" prefWidth="412.0">
+                                                                           <columnConstraints>
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                           </columnConstraints>
+                                                                           <rowConstraints>
+                                                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                           </rowConstraints>
+                                                                           <children>
+                                                                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Correo" />
+                                                                              <TextField fx:id="correomodempl" GridPane.columnIndex="1" />
+                                                                           </children>
+                                                                        </GridPane>
+                                                                        <Button fx:id="modempl" layoutX="458.0" layoutY="322.0" mnemonicParsing="false" onAction="#actionmodempl" text="Modificar" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </content>
+                                                            </TitledPane>
+                                                            <TitledPane animated="false" text="Producto">
+                                                               <content>
+                                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <GridPane fx:id="panemodtipo" layoutX="48.0" layoutY="177.0" prefHeight="30.0" prefWidth="430.0">
+                                                                           <columnConstraints>
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                           </columnConstraints>
+                                                                           <rowConstraints>
+                                                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                           </rowConstraints>
+                                                                           <children>
+                                                                              <ComboBox fx:id="tipoprodmod" opacity="0.47" prefHeight="40.0" prefWidth="210.0" promptText="Tipo" GridPane.columnIndex="1" />
+                                                                              <Label prefHeight="36.0" prefWidth="100.0" text="Tipo de Producto" />
+                                                                           </children>
+                                                                        </GridPane>
+                                                                        <Button fx:id="modprod" layoutX="456.0" layoutY="320.0" mnemonicParsing="false" onAction="#actionmodprod" text="Modificar" />
+                                                                        <Text layoutX="48.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrese el Código de Barras del Producto a Modificar" textAlignment="CENTER" wrappingWidth="177.37924194335938" />
+                                                                        <TextField fx:id="codigoprodmod" layoutX="263.0" layoutY="38.0" prefHeight="26.0" prefWidth="210.0" />
+                                                                        <Text layoutX="48.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seleccione el Campo a Modificar" />
+                                                                        <ComboBox fx:id="combmodprod" layoutX="263.0" layoutY="91.0" onAction="#addcombmodprod" prefHeight="26.0" prefWidth="211.0" />
+                                                                        <GridPane fx:id="panemodnombre" layoutX="48.0" layoutY="192.0" prefHeight="30.0" prefWidth="430.0">
+                                                                           <columnConstraints>
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                           </columnConstraints>
+                                                                           <rowConstraints>
+                                                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                           </rowConstraints>
+                                                                           <children>
+                                                                              <Label prefHeight="36.0" prefWidth="100.0" text="Nombre" />
+                                                                              <TextField fx:id="nombreprodmod" GridPane.columnIndex="1" />
+                                                                           </children>
+                                                                        </GridPane>
+                                                                        <GridPane fx:id="panemodprecio" layoutX="48.0" layoutY="207.0" prefHeight="30.0" prefWidth="430.0">
+                                                                           <columnConstraints>
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                           </columnConstraints>
+                                                                           <rowConstraints>
+                                                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                           </rowConstraints>
+                                                                           <children>
+                                                                              <Label prefHeight="36.0" prefWidth="100.0" text="Precio" />
+                                                                              <TextField fx:id="precioprodmod" GridPane.columnIndex="1" />
+                                                                           </children>
+                                                                        </GridPane>
+                                                                        <GridPane fx:id="panemodimpuesto" layoutX="48.0" layoutY="222.0" prefHeight="30.0" prefWidth="430.0">
+                                                                           <columnConstraints>
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                           </columnConstraints>
+                                                                           <rowConstraints>
+                                                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                           </rowConstraints>
+                                                                           <children>
+                                                                              <Label prefHeight="36.0" prefWidth="100.0" text="Impuesto" />
+                                                                              <TextField fx:id="impuestomod" GridPane.columnIndex="1" />
+                                                                           </children>
+                                                                        </GridPane>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </content>
+                                                            </TitledPane>
+                                                            <TitledPane animated="false" text="Almacén">
+                                                               <content>
+                                                                  <AnchorPane fx:id="grazu11" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <GridPane fx:id="panemoddiralm" layoutX="76.0" layoutY="150.0" prefHeight="50.0" prefWidth="394.0">
+                                                                           <columnConstraints>
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                           </columnConstraints>
+                                                                           <rowConstraints>
+                                                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                           </rowConstraints>
+                                                                           <children>
+                                                                              <Label prefHeight="36.0" prefWidth="212.0" text="Dirección" />
+                                                                              <TextField fx:id="direccionalmod" prefHeight="26.0" prefWidth="178.0" promptText="Dirección Almacén" GridPane.columnIndex="1" />
+                                                                           </children>
+                                                                        </GridPane>
+                                                                        <Button fx:id="modificaralm" layoutX="457.0" layoutY="263.0" mnemonicParsing="false" onAction="#actionmodificaralm" text="Modificar" />
+                                                                        <Text layoutX="43.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrese el Código de Barras del Producto a Modificar" textAlignment="CENTER" wrappingWidth="177.37924194335938" />
+                                                                        <Text layoutX="46.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seleccione el Campo a Modificar" />
+                                                                        <ComboBox fx:id="combmodalm" layoutX="273.0" layoutY="83.0" onAction="#addcombmodalm" prefHeight="26.0" prefWidth="211.0" />
+                                                                        <TextField fx:id="nitalmod" layoutX="273.0" layoutY="37.0" prefHeight="26.0" prefWidth="209.0" promptText="NIT Almacén" />
+                                                                        <GridPane fx:id="panemodnombrealm" layoutX="76.0" layoutY="153.0" prefHeight="35.0" prefWidth="395.0">
+                                                                          <columnConstraints>
+                                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                          </columnConstraints>
+                                                                          <rowConstraints>
+                                                                            <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+                                                                              <RowConstraints maxHeight="30.4" minHeight="10.0" prefHeight="18.4" vgrow="SOMETIMES" />
+                                                                          </rowConstraints>
+                                                                           <children>
+                                                                              <Label prefHeight="36.0" prefWidth="213.0" text="Nombre" GridPane.rowIndex="1" />
+                                                                              <TextField fx:id="nombrealmmod" promptText="Nombre Almacén" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                           </children>
+                                                                        </GridPane>
+                                                                        <GridPane fx:id="panemodtelefonoalm" layoutX="78.0" layoutY="141.0" prefHeight="74.0" prefWidth="392.0">
+                                                                          <columnConstraints>
+                                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                          </columnConstraints>
+                                                                          <rowConstraints>
+                                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                          </rowConstraints>
+                                                                           <children>
+                                                                              <Label prefHeight="36.0" prefWidth="100.0" text="Teléfono" />
+                                                                              <TextField fx:id="telefonoalmod" promptText="Teléfono Almacén" GridPane.columnIndex="1" />
+                                                                           </children>
+                                                                        </GridPane>
+                                                                        <GridPane fx:id="panemodgerentealm" layoutX="76.0" layoutY="157.0" prefHeight="36.0" prefWidth="394.0">
+                                                                          <columnConstraints>
+                                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                          </columnConstraints>
+                                                                          <rowConstraints>
+                                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                          </rowConstraints>
+                                                                           <children>
+                                                                              <TextField fx:id="gerentealmmod" promptText="Gerente Almacén" GridPane.columnIndex="1" />
+                                                                              <Label prefHeight="36.0" prefWidth="213.0" text="Gerente" />
+                                                                           </children>
+                                                                        </GridPane>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </content>
+                                                            </TitledPane>
+                                                         </panes>
+                                                      </Accordion>
+                                                   </children>
+                                                </AnchorPane>
+                                             </items>
+                                          </SplitPane>
+                                       </children></AnchorPane>
+											</content>
+										</Tab>
+										<Tab text="Consultar">
+											<content>
+												<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="259.0" prefWidth="361.0">
+													<children>
+                                          <SplitPane dividerPositions="0.33254493850520334" layoutX="14.0" layoutY="14.0" prefHeight="462.0" prefWidth="847.0">
+                                            <items>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: white;">
+                                                   <children>
+                                                      <ImageView fitHeight="373.0" fitWidth="276.0" layoutX="8.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@Logo.jpg" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children></AnchorPane>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="461.0" prefWidth="303.0">
+                                                   <children>
+            														<Accordion prefHeight="462.0" prefWidth="562.0">
+            															<panes>
+            																<TitledPane animated="false" prefHeight="387.0" prefWidth="658.0" text="Cliente">
+            																	<content>
+            																		<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            																			<children>
+            																				<GridPane layoutX="25.0" layoutY="56.0" prefHeight="227.0" prefWidth="455.0">
+            																					<columnConstraints>
+            																						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            																						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            																					</columnConstraints>
+            																					<rowConstraints>
+            																						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																					</rowConstraints>
+            																					<children>
+            																						<TextField fx:id="cedulaclientecons" GridPane.columnIndex="1" />
+            																						<Text strokeType="OUTSIDE" strokeWidth="0.0" text="Correo" wrappingWidth="190.1366958618164" GridPane.rowIndex="1" />
+            																						<Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" wrappingWidth="190.1366958618164" GridPane.rowIndex="2" />
+            																						<TextField fx:id="correoclientecons" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            																						<TextField fx:id="nombreclientecons" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrese la Cédula del Cliente a Consultar" textAlignment="CENTER" wrappingWidth="225.2523193359375">
+                                                                                 <font>
+                                                                                    <Font size="13.0" />
+                                                                                 </font>
+                                                                              </Text>
+            																					</children>
+            																				</GridPane>
+                                                                        <Button fx:id="conscliente" layoutX="454.0" layoutY="320.0" mnemonicParsing="false" onAction="#actionconscliente" text="Consultar" />
+            																			</children>
+            																		</AnchorPane>
+            																	</content>
+            																</TitledPane>
+            																<TitledPane animated="false" prefHeight="435.0" prefWidth="852.0" text="Empleados">
+            																	<content>
+            																		<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            																			<children>
+            																				<GridPane layoutX="51.0" layoutY="31.0" prefHeight="230.0" prefWidth="398.0">
+            																					<columnConstraints>
+            																						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            																						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            																					</columnConstraints>
+            																					<rowConstraints>
+            																						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																					</rowConstraints>
+            																					<children>
+            																						<TextField fx:id="cedulaemplcons" GridPane.columnIndex="1" />
+            																						<Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrese la Cédula del Empleado a Consultar" textAlignment="CENTER" wrappingWidth="190.1366958618164" />
+            																						<Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" wrappingWidth="190.1366958618164" GridPane.rowIndex="1" />
+            																						<Text strokeType="OUTSIDE" strokeWidth="0.0" text="Correo" wrappingWidth="190.1366958618164" GridPane.rowIndex="2" />
+            																						<TextField fx:id="nombreemplcons" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            																						<TextField fx:id="correoemplcons" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            																					</children>
+            																				</GridPane>
+                                                                        <Button fx:id="consempl" layoutX="456.0" layoutY="321.0" mnemonicParsing="false" onAction="#actionconsemp" text="Consultar" />
+            																			</children>
+            																		</AnchorPane>
+            																	</content>
+            																</TitledPane>
+            																<TitledPane animated="false" text="Producto">
+            																	<content>
+            																		<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            																			<children>
+            																				<GridPane layoutX="46.0" layoutY="14.0" prefHeight="310.0" prefWidth="502.0">
+            																					<columnConstraints>
+            																						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            																						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            																					</columnConstraints>
+            																					<rowConstraints>
+            																						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																					</rowConstraints>
+            																					<children>
+            																						<TextField fx:id="codigoprodcons" promptText="Código" GridPane.columnIndex="1" />
+            																						<TextField fx:id="nombreprodcons" disable="true" editable="false" promptText="Nombre" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            																						<TextField fx:id="precioprodcons" disable="true" editable="false" promptText="Precio" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            																						<Label prefHeight="36.0" prefWidth="100.0" text="Tipo de Producto" GridPane.rowIndex="1" />
+            																						<Label prefHeight="36.0" prefWidth="100.0" text="Nombre" GridPane.rowIndex="2" />
+            																						<Label prefHeight="36.0" prefWidth="213.0" text="Precio" GridPane.rowIndex="3" />
+            																						<Label prefHeight="36.0" prefWidth="212.0" text="Impuesto" GridPane.rowIndex="4" />
+                                                                              <TextField fx:id="tipoprodcons" disable="true" editable="false" promptText="Tipo" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                              <TextField fx:id="impuestoprodcons" disable="true" editable="false" promptText="Impuesto" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrese el Código de Barras del Producto a Consultar" textAlignment="CENTER" wrappingWidth="249.2523193359375">
+                                                                                 <font>
+                                                                                    <Font size="13.0" />
+                                                                                 </font>
+                                                                              </Text>
+            																					</children>
+            																				</GridPane>
+                                                                        <Button fx:id="consprod" layoutX="480.0" layoutY="324.0" mnemonicParsing="false" onAction="#actionconsprod" text="Consultar" />
+            																			</children>
+            																		</AnchorPane>
+            																	</content>
+            																</TitledPane>
+                                                            <TitledPane animated="false" text="Almacén">
+                                                               <content>
+                                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <Button fx:id="consalm" layoutX="480.0" layoutY="319.0" mnemonicParsing="false" onAction="#actionconsalm" text="Consultar" />
+                                                                        <GridPane layoutX="57.0" layoutY="26.0" prefHeight="306.0" prefWidth="429.0">
+                                                                           <columnConstraints>
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                           </columnConstraints>
+                                                                           <rowConstraints>
+                                                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                           </rowConstraints>
+                                                                           <children>
+                                                                              <TextField fx:id="nombrealmcons" disable="true" editable="false" promptText="Nombre Almacén" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                              <TextField fx:id="gerentealmcons" disable="true" editable="false" promptText="Gerente Almacén" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                                              <Label prefHeight="36.0" prefWidth="100.0" text="Nombre" GridPane.rowIndex="1" />
+                                                                              <Label prefHeight="36.0" prefWidth="100.0" text="Teléfono" GridPane.rowIndex="2" />
+                                                                              <Label prefHeight="36.0" prefWidth="213.0" text="Gerente" GridPane.rowIndex="3" />
+                                                                              <Label prefHeight="36.0" prefWidth="212.0" text="Dirección" GridPane.rowIndex="4" />
+                                                                              <TextField fx:id="nitalmcons" promptText="NIT Almacén" GridPane.columnIndex="1" />
+                                                                              <TextField fx:id="telefonoalmcons" disable="true" editable="false" layoutX="225.0" layoutY="151.0" promptText="Teléfono Almacén" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                              <TextField fx:id="direccionalmcons" disable="true" editable="false" promptText="Dirección Almacén" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrese el NIT del Almacén a Consultar" textAlignment="CENTER" wrappingWidth="217.2523193359375">
+                                                                                 <font>
+                                                                                    <Font size="13.0" />
+                                                                                 </font>
+                                                                              </Text>
+                                                                           </children>
+                                                                        </GridPane>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </content>
+                                                            </TitledPane>
+            															</panes>
+            														</Accordion>
+                                                   </children>
+                                                </AnchorPane>
+                                            </items>
+                                          </SplitPane>
+													</children>
+												</AnchorPane>
+											</content>
+										</Tab>
+										<Tab text="Eliminar">
+											<content>
+												<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="259.0" prefWidth="361.0">
+													<children>
+                                          <SplitPane dividerPositions="0.33254493850520334" layoutX="14.0" layoutY="14.0" prefHeight="462.0" prefWidth="847.0">
+                                            <items>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: white;">
+                                                   <children>
+                                                      <ImageView fitHeight="373.0" fitWidth="276.0" layoutX="8.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@Logo.jpg" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children></AnchorPane>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="461.0" prefWidth="303.0" style="-fx-background-color: white;">
+                                                   <children>
+                                                      <Text layoutX="76.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Código de la Factura" />
+                                                      <Text layoutX="228.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Factura a Eliminar">
+                                                         <font>
+                                                            <Font name="System Bold Italic" size="12.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <TextField fx:id="codfactelim" layoutX="281.0" layoutY="204.0" />
+                                                      <Button fx:id="elfactura" layoutX="413.0" layoutY="283.0" mnemonicParsing="false" onAction="#actionelimfact" text="Eliminar Factura" />
+                                                      <TextField fx:id="result" disable="true" editable="false" layoutX="76.0" layoutY="238.0" prefHeight="26.0" prefWidth="364.0" style="-fx-border-color: transparent; -fx-background-color: transparent; -fx-text-fill: red;" />
+                                                   </children>
+                                                </AnchorPane>
+                                            </items>
+                                          </SplitPane>
+													</children>
+												</AnchorPane>
+											</content>
+										</Tab>
+										
+									</tabs>
+								</TabPane>
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+				<Tab text="Factura">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane layoutX="19.0" layoutY="5.0" prefHeight="505.0" prefWidth="867.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="Crear">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="459.0" prefWidth="867.0">
+                                       <children>
+                                          <GridPane layoutX="67.0" layoutY="95.0" prefHeight="108.0" prefWidth="288.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Código Barras " />
+                                                <TextField fx:id="codigoprodconsfactura" GridPane.columnIndex="1" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cantidad" GridPane.rowIndex="1" />
+                                                <TextField fx:id="cantidadconsprodfactura" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                             </children>
+                                          </GridPane>
+                                          <Text layoutX="42.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Producto">
+                                             <font>
+                                                <Font name="System Bold Italic" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <Button fx:id="agregarprodfactura" layoutX="155.0" layoutY="218.0" mnemonicParsing="false" onAction="#actionagregarprodfactura" text="Agregar Producto" />
+                                          <GridPane layoutX="63.0" layoutY="259.0" prefHeight="176.0" prefWidth="294.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cédula Cliente" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cédula Empleado" GridPane.rowIndex="1" />
+                                                <TextField fx:id="cedulaclienteconsfactura" GridPane.columnIndex="1" />
+                                                <TextField fx:id="cedulaemplconsfactura" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                             </children>
+                                          </GridPane>
+                                          <AnchorPane layoutX="451.0" minHeight="0.0" minWidth="0.0" prefHeight="462.0" prefWidth="413.0">
+                                             <children>
+                                                <ComboBox fx:id="tipopago" layoutX="188.0" layoutY="46.0" onAction="#addtipopago" prefHeight="26.0" prefWidth="174.0" promptText="Tipo de Pago" />
+                                                <GridPane fx:id="paneefec" layoutX="11.0" layoutY="86.0" prefHeight="103.0" prefWidth="354.0">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="177.0" minWidth="10.0" prefWidth="177.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="177.0" minWidth="10.0" prefWidth="177.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints maxHeight="205.00003662109376" minHeight="10.0" prefHeight="68.79998168945312" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <Label prefHeight="31.0" prefWidth="103.0" text="Cantidad Recibida" />
+                                                      <TextField fx:id="cantidadefectivo" prefWidth="207.0" promptText="Cantidad" GridPane.columnIndex="1" />
+                                                   </children>
+                                                </GridPane>
+                                                <Text layoutX="11.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seleccione el Tipo Pago">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="12.0" />
+                                                   </font></Text>
+                                                <GridPane fx:id="panetar" layoutX="11.0" layoutY="110.0" prefHeight="233.0" prefWidth="355.0">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <Label prefHeight="31.0" prefWidth="103.0" text="Titular" />
+                                                      <Label prefHeight="31.0" prefWidth="103.0" text="Número de Tarjeta" GridPane.rowIndex="1" />
+                                                      <TextField fx:id="titulartar" promptText="Nombre Titular Tarjeta" GridPane.columnIndex="1" />
+                                                      <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <Label prefHeight="31.0" prefWidth="103.0" text="Banco" GridPane.rowIndex="2" />
+                                                      <TextField fx:id="banctar" promptText="Banco" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <TextField fx:id="ntar" promptText="N° Tarjeta" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <Label prefHeight="31.0" prefWidth="103.0" text="Tipo" GridPane.rowIndex="3" />
+                                                      <TextField fx:id="tipotar" promptText="Tipo de Tarjeta " GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                      <Label prefHeight="31.0" prefWidth="103.0" text="Titular" />
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </AnchorPane>
+                                          <Button fx:id="crearfactura" layoutX="389.0" layoutY="449.0" mnemonicParsing="false" onAction="#actioncrearfactura" text="Crear Factura " />
+                                          <GridPane fx:id="panecheque" layoutX="459.0" layoutY="109.0" prefHeight="243.0" prefWidth="358.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Label prefHeight="31.0" prefWidth="103.0" text="Titular" GridPane.rowIndex="1" />
+                                                <Label prefHeight="31.0" prefWidth="103.0" text="Número de Cheque" />
+                                                <Label prefHeight="31.0" prefWidth="103.0" text="Fecha" GridPane.rowIndex="2" />
+                                                <TextField fx:id="numref" promptText="N° Cheque" GridPane.columnIndex="1" />
+                                                <TextField fx:id="titucheque" promptText="Titular" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <DatePicker fx:id="fechacheque" opacity="0.69" prefHeight="26.0" prefWidth="261.0" promptText="Fecha" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <Label prefHeight="31.0" prefWidth="103.0" text="Banco" GridPane.rowIndex="3" />
+                                                <TextField fx:id="banccheque" promptText="Banco" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                             </children>
+                                          </GridPane>
+                                          <Text layoutX="42.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Número Factura">
+                                             <font>
+                                                <Font name="System Bold Italic" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextField fx:id="numrecibo" layoutX="210.0" layoutY="34.0" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="Imprimir">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="436.0" prefWidth="860.0" style="-fx-background-color: white;">
+                                             <children>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="432.0" prefWidth="870.0" style="-fx-background-color: white;">
+                                                   <children>
+                                                      <Button fx:id="imp" layoutX="793.0" layoutY="10.0" mnemonicParsing="false" onAction="#onimp" prefHeight="30.0" prefWidth="62.0" text="Generar" />
+                                                      <TextField fx:id="considfactura" layoutX="31.0" layoutY="14.0" prefHeight="26.0" prefWidth="743.0" promptText="Factura a Generar" />
+                                                      <SplitPane dividerPositions="0.6437360178970918" layoutX="30.0" layoutY="63.0" orientation="VERTICAL" prefHeight="359.0" prefWidth="744.0">
+                                                        <items>
+                                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="186.0" prefWidth="766.0" style="-fx-background-color: white;">
+                                                               <children>
+                                                                  <Text layoutX="9.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FACTURA" wrappingWidth="219.85523223876953">
+                                                                     <font>
+                                                                        <Font name="Gill Sans MT Condensed" size="46.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                                  <GridPane layoutX="9.0" layoutY="45.0" prefHeight="92.0" prefWidth="270.0">
+                                                                    <columnConstraints>
+                                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                     <children>
+                                                                        <TextField fx:id="nitfact" disable="true" editable="false" promptText="NIT" style="-fx-background-color: transparent; -fx-border-color: transparent;" />
+                                                                        <TextField fx:id="nombrefact" disable="true" editable="false" promptText="Razón Social" style="-fx-border-color: transparent; -fx-background-color: transparent;" GridPane.rowIndex="1" />
+                                                                        <TextField fx:id="dirfact" disable="true" editable="false" promptText="Dirección" style="-fx-border-color: transparent; -fx-background-color: transparent;" GridPane.rowIndex="2" />
+                                                                        <TextField fx:id="telfact" disable="true" editable="false" promptText="Teléfono" style="-fx-border-color: transparent; -fx-background-color: transparent;" GridPane.rowIndex="3" />
+                                                                        <TextField fx:id="gerentefact" disable="true" editable="false" promptText="Gerente" style="-fx-border-color: transparent; -fx-background-color: transparent;" GridPane.rowIndex="4" />
+                                                                     </children>
+                                                                  </GridPane>
+                                                                  <GridPane layoutX="25.0" layoutY="164.0" prefHeight="50.0" prefWidth="222.0">
+                                                                     <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                     </columnConstraints>
+                                                                     <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                     </rowConstraints>
+                                                                     <children>
+                                                                        <TextField fx:id="cedclienfact" disable="true" editable="false" promptText="Cédula Cliente" style="-fx-border-color: transparent; -fx-background-color: transparent;" />
+                                                                        <TextField fx:id="correoclienfact" disable="true" editable="false" promptText="Correo Cliente" style="-fx-border-color: transparent; -fx-background-color: transparent;" GridPane.rowIndex="1" />
+                                                                        <TextField fx:id="nombreclienfact" disable="true" editable="false" promptText="Nombre Cliente" style="-fx-border-color: transparent; -fx-background-color: transparent;" GridPane.rowIndex="2" />
+                                                                     </children>
+                                                                  </GridPane>
+                                                                  <Text layoutX="25.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FACTURAR A ">
+                                                                     <font>
+                                                                        <Font name="Gill Sans MT Condensed" size="17.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                                  <Text layoutX="302.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VENDIDO POR">
+                                                                     <font>
+                                                                        <Font name="Gill Sans MT Condensed" size="17.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                                  <GridPane layoutX="302.0" layoutY="164.0" prefHeight="50.0" prefWidth="222.0">
+                                                                     <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                     </columnConstraints>
+                                                                     <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                     </rowConstraints>
+                                                                     <children>
+                                                                        <TextField fx:id="cedemplfact" disable="true" editable="false" promptText="Cédula Empleado" style="-fx-border-color: transparent; -fx-background-color: transparent;" />
+                                                                        <TextField fx:id="correoemplfact" disable="true" editable="false" prefHeight="26.0" prefWidth="250.0" promptText="Correo Empleado" style="-fx-border-color: transparent; -fx-background-color: transparent;" GridPane.rowIndex="1" />
+                                                                        <TextField fx:id="nombreemplfact" disable="true" editable="false" promptText="Nombre Empleado" style="-fx-border-color: transparent; -fx-background-color: transparent;" GridPane.rowIndex="2" />
+                                                                     </children>
+                                                                  </GridPane>
+                                                                  <GridPane layoutX="579.0" layoutY="144.0" prefHeight="68.0" prefWidth="142.0">
+                                                                     <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                     </columnConstraints>
+                                                                     <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                     </rowConstraints>
+                                                                     <children>
+                                                                        <TextField fx:id="numfact" disable="true" editable="false" prefHeight="26.0" prefWidth="250.0" promptText="Número Factura" style="-fx-border-color: transparent; -fx-background-color: transparent;" GridPane.rowIndex="1" />
+                                                                        <TextField fx:id="fechafact" disable="true" editable="false" promptText="Fecha Factura" style="-fx-border-color: transparent; -fx-background-color: transparent;" GridPane.rowIndex="3" />
+                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="FECHA" GridPane.rowIndex="2">
+                                                                           <font>
+                                                                              <Font name="Gill Sans MT Condensed" size="17.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="N° DE FACTURA">
+                                                                           <font>
+                                                                              <Font name="Gill Sans MT Condensed" size="17.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                     </children>
+                                                                  </GridPane>
+                                                               </children>
+                                                            </AnchorPane>
+                                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="350.0" prefWidth="766.0" style="-fx-background-color: white;">
+                                                               <children>
+                                                                  <TableView fx:id="tablaprod" layoutX="22.0" layoutY="14.0" prefHeight="200.0" prefWidth="730.0">
+                                                                    <columns>
+                                                                      <TableColumn fx:id="colcant" editable="false" prefWidth="182.0" text="CÓDIGO BARRAS" />
+                                                                      <TableColumn fx:id="coldesc" editable="false" minWidth="0.0" prefWidth="182.0" text="PRODUCTO" />
+                                                                        <TableColumn fx:id="colprecio" editable="false" prefWidth="182.0" text="CANTIDAD" />
+                                                                        <TableColumn fx:id="colimp" editable="false" prefWidth="182.0" text="PRECIO UNITARIO" />
+                                                                    </columns>
+                                                                  </TableView>
+                                                                  <GridPane layoutX="22.0" layoutY="266.0" prefHeight="70.0" prefWidth="270.0">
+                                                                    <columnConstraints>
+                                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                     <children>
+                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="8 %" textAlignment="CENTER" wrappingWidth="134.25516510009766">
+                                                                           <font>
+                                                                              <Font name="Gill Sans MT Condensed" size="17.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="19 %" textAlignment="CENTER" wrappingWidth="134.2552261352539" GridPane.rowIndex="1">
+                                                                           <font>
+                                                                              <Font name="Gill Sans MT Condensed" size="17.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                        <TextField fx:id="impu8" disable="true" editable="false" promptText="Impuestos Base 8%" style="-fx-border-color: transparent; -fx-background-color: transparent;" GridPane.columnIndex="1" />
+                                                                        <TextField fx:id="impu19" disable="true" editable="false" promptText="Impuestos Base 19 %" style="-fx-border-color: transparent; -fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                     </children>
+                                                                  </GridPane>
+                                                                  <Text layoutX="22.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IMPUESTOS" textAlignment="CENTER" wrappingWidth="289.4552230834961">
+                                                                     <font>
+                                                                        <Font name="Gill Sans MT Condensed" size="26.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                                  <Text layoutX="447.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOTAL" textAlignment="CENTER" wrappingWidth="289.4552230834961">
+                                                                     <font>
+                                                                        <Font name="Gill Sans MT Condensed" size="26.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                                  <GridPane layoutX="456.0" layoutY="266.0" prefHeight="70.0" prefWidth="270.0">
+                                                                     <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                     </columnConstraints>
+                                                                     <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                     </rowConstraints>
+                                                                     <children>
+                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="SUBTOTAL" textAlignment="CENTER" wrappingWidth="134.25516510009766">
+                                                                           <font>
+                                                                              <Font name="Gill Sans MT Condensed" size="17.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="TOTAL" textAlignment="CENTER" wrappingWidth="134.2552261352539" GridPane.rowIndex="1">
+                                                                           <font>
+                                                                              <Font name="Gill Sans MT Condensed" size="17.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                        <TextField fx:id="subtotal" disable="true" editable="false" promptText="Total Sin Impuestos" style="-fx-border-color: transparent; -fx-background-color: transparent;" GridPane.columnIndex="1" />
+                                                                        <TextField fx:id="total" disable="true" editable="false" promptText="Total + Impuestos" style="-fx-border-color: transparent; -fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                     </children>
+                                                                  </GridPane>
+                                                               </children>
+                                                            </AnchorPane>
+                                                        </items>
+                                                      </SplitPane>
+                                                      <Button layoutX="793.0" layoutY="50.0" mnemonicParsing="false" onAction="#actionlimpiar" prefHeight="30.0" prefWidth="62.0" text="Limpiar" />
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children></AnchorPane>
+					</content>
+				</Tab>
+			</tabs>
+		</TabPane>
+	</children>
+</AnchorPane>
